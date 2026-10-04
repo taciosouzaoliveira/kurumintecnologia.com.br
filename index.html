@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kurumin Tecnologia | Consultoria de Infraestrutura e Cloud</title>
+<meta name="description" content="Consultoria de infraestrutura, automação e cloud para PMEs: servidor Linux, backups, CI/CD, containers, Kubernetes e IA. Diagnóstico, implementação, documentação e repasse.">
+<link rel="canonical" href="https://kurumintecnologia.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kurumin Tecnologia">
+<meta property="og:title" content="Kurumin Tecnologia | Infraestrutura em ordem, sem derrubar o que já funciona">
+<meta property="og:description" content="Consultoria de infraestrutura, redes, automação e cloud para pequenas e médias empresas.">
+<meta property="og:url" content="https://kurumintecnologia.com.br/">
+<meta property="og:image" content="https://kurumintecnologia.com.br/cases/wifi-pousada/img/antena-instalada.jpg">
+<meta name="theme-color" content="#0b0f17">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0f17;--card:#161b22;--line:#30363d;--text:#c9d1d9;--muted:#8b949e;--blue:#58a6ff;--green:#3fb950}
+@media (prefers-color-scheme:light){:root{--bg:#f6f8fa;--card:#fff;--line:#d0d7de;--text:#24292f;--muted:#57606a;--blue:#0969da;--green:#1a7f37}}
+*{box-sizing:border-box}
+html{scroll-padding-top:1rem}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+main{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.back{font-size:.9rem;color:var(--muted);text-decoration:none}
+header{padding:3rem 0 2rem;border-bottom:1px solid var(--line)}
+h1{font-family:"Ubuntu","Segoe UI",system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:.5rem 0 1rem;max-width:20ch}
+h1 span{color:var(--blue)}
+.lead{max-width:62ch;color:var(--muted);font-size:1.1rem;margin:0 0 1.5rem}
+.btn{display:inline-block;background:var(--blue);color:#0b0f17;font-weight:700;padding:.75rem 1.25rem;border-radius:8px;text-decoration:none}
+.btn.alt{background:transparent;color:var(--blue);border:1px solid var(--line);margin-left:.5rem}
+section{margin-top:3rem}
+h2{font-size:1.5rem;margin:0 0 1rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+.card h3{margin:0 0 .5rem;font-size:1.15rem}
+.card p{margin:.5rem 0;color:var(--muted)}
+.card ul{margin:.75rem 0 0;padding-left:1.1rem}
+.card li{margin:.3rem 0}
+.main{border-left:3px solid var(--blue)}
+.tag{font-size:.85rem;color:var(--green);font-weight:600}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:.75rem}
+ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem 1rem 3.25rem;position:relative}
+ol.steps li::before{content:counter(s);position:absolute;left:1rem;top:1rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--blue);color:#0b0f17;font-weight:700;display:grid;place-items:center;font-size:.9rem}
+ol.steps strong{display:block}
+.cta{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2.5rem 1.25rem}
+.cta p{max-width:52ch;margin:0 auto 1.25rem;color:var(--muted)}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.kicker{font-size:.9rem;color:var(--green);font-weight:600;margin:0}
+.muted{color:var(--muted);margin-top:-.5rem}
+.pains{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem;font-style:italic}
+.lvl{border-top:3px solid var(--lvl)}
+.lvl.main{border-left:1px solid var(--line)}
+.step{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--lvl)!important;margin:0 0 .25rem!important}
+.support{margin-top:1rem;border-left:3px solid var(--green)}
+code{font-size:.9em;background:var(--line);padding:.1em .35em;border-radius:4px}
+.cta .btn.alt{margin-left:.5rem}
+.whats-float{position:fixed;right:20px;bottom:20px;z-index:1000;display:flex;align-items:center;gap:10px;padding:12px 18px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .2s ease}
+.whats-float:hover{transform:scale(1.05)}
+.whats-float:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.whats-float svg{width:21px;height:24px;fill:#fff;flex-shrink:0}
+@media (max-width:520px){.btn.alt,.cta .btn.alt{margin:.75rem 0 0}.whats-float{padding:14px}.whats-float span{display:none}}
+.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.links a{color:var(--text);text-decoration:none;font-weight:600;font-size:.95rem;padding:.5rem 1rem;border:1px solid var(--line);border-radius:999px;background:var(--card);transition:border-color .2s ease,color .2s ease}
+.links a:hover{border-color:var(--blue);color:var(--blue)}
+.cases-cta{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;align-items:center;text-decoration:none;color:inherit;border-left:3px solid var(--green);transition:border-color .2s ease}
+.cases-cta:hover{border-color:var(--green)}
+.cases-cta img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block}
+.cases-cta h3{color:var(--text);font-size:1.35rem;margin:.25rem 0 .5rem}
+.cases-cta .tag{color:var(--green);margin:0}
+.cases-cta .btn{margin-top:.75rem}
+@media (max-width:560px){.cases-cta{grid-template-columns:1fr}.cases-cta img{aspect-ratio:16/9}}
+.cases-cta img,.case-item img{object-position:15% 85%}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <p class="kicker">Kurumin Tecnologia · Consultoria de infraestrutura e cloud</p>
+  <h1>Infraestrutura em ordem, <span>sem derrubar o que já funciona</span></h1>
+  <p class="lead">Ajudo pequenas e médias empresas a colocar servidores, deploy e cloud em ordem. Eu diagnostico, implemento, documento e ensino sua equipe a operar. Começo pelo problema mais urgente e só mexo na produção depois de validar.</p>
+  <a class="btn" href="https://wa.me/5579996441081?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kurumin%20e%20quero%20marcar%20uma%20conversa." target="_blank" rel="noopener">Marcar conversa gratuita</a>
+  <a class="btn alt" href="#servicos">Ver serviços</a>
+</header>
+
+<section>
+  <h2>Algum desses soa familiar?</h2>
+  <ul class="pains">
+    <li>“Nosso site está lento ou cai e ninguém sabe por quê.”</li>
+    <li>“Temos um servidor Linux, mas ninguém sabe como ele está configurado.”</li>
+    <li>“O deploy é manual, feito por uma pessoa só, e dá medo mexer.”</li>
+    <li>“Nunca testamos se o backup realmente volta.”</li>
+    <li>“Queremos usar containers, Kubernetes ou IA, mas não sabemos por onde começar.”</li>
+  </ul>
+</section>
+
+<section id="servicos">
+  <h2>Serviços, do primeiro passo ao Cloud Native</h2>
+  <p class="muted">Você não precisa começar pelo Kubernetes. Cada degrau resolve um problema real e prepara o próximo.</p>
+  <div class="grid">
+    <div class="card lvl" style="--lvl:#3fb950">
+      <p class="step">Degrau 1</p>
+      <h3>Presença Web</h3>
+      <p>Seu site no ar, com domínio, HTTPS e e-mail profissional.</p>
+      <ul><li>Site institucional ou landing page</li><li>Domínio, DNS e HTTPS</li><li>E-mail com SPF, DKIM e DMARC</li></ul>
+    </div>
+    <div class="card lvl" style="--lvl:#58a6ff">
+      <p class="step">Degrau 2</p>
+      <h3>Servidor em Ordem</h3>
+      <p>Linux seguro, com backup testado e tudo documentado.</p>
+      <ul><li>Diagnóstico e atualização</li><li>Nginx, usuários, SSH e firewall</li><li>Backups com teste de restauração</li></ul>
+    </div>
+    <div class="card lvl" style="--lvl:#a371f7">
+      <p class="step">Degrau 3</p>
+      <h3>Deploy Automático</h3>
+      <p>Do <code>git push</code> para produção, sem passo manual.</p>
+      <ul><li>Git e GitHub organizados</li><li>CI/CD com GitHub Actions</li><li>Scripts e rollback</li></ul>
+    </div>
+    <div class="card lvl" style="--lvl:#f0883e">
+      <p class="step">Degrau 4</p>
+      <h3>Containers</h3>
+      <p>Sua aplicação empacotada, rodando igual em qualquer lugar.</p>
+      <ul><li>Docker e Docker Compose</li><li>Ambientes reproduzíveis</li><li>Infraestrutura como código (Terraform, Ansible)</li></ul>
+    </div>
+    <div class="card lvl main" style="--lvl:#f85149">
+      <p class="step">Degrau 5</p>
+      <h3>Kubernetes sem Susto</h3>
+      <p>Piloto em ambiente paralelo, para você ver funcionando antes de decidir.</p>
+      <ul><li>Cluster paralelo, sem tocar na produção</li><li>GitOps com Argo CD</li><li>Prometheus e Grafana</li></ul>
+    </div>
+    <div class="card lvl" style="--lvl:#39c5cf">
+      <p class="step">Sob medida</p>
+      <h3>IA Aplicada</h3>
+      <p>IA trabalhando com os seus dados, sem expor os seus dados.</p>
+      <ul><li>LLMs locais ou em nuvem</li><li>Automações e agentes</li><li>Análise de logs e documentos</li></ul>
+    </div>
+  </div>
+  <div class="card support">
+    <h3>Suporte mensal</h3>
+    <p>Depois da entrega, acompanho o ambiente com monitoramento, atualizações, revisão de alertas e custos, e um banco de horas para dúvidas, enquanto sua equipe ganha autonomia.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Como funciona</h2>
+  <ol class="steps">
+    <li><strong>Conversa inicial (30 min, sem custo)</strong>Você conta o cenário e o que quer resolver.</li>
+    <li><strong>Diagnóstico</strong>Mapeio o ambiente e entrego os riscos em ordem de prioridade, com um plano por etapas.</li>
+    <li><strong>Proposta com escopo fechado</strong>Você sabe o que será entregue, quando e quanto custa antes de começar.</li>
+    <li><strong>Execução com segurança</strong>Backup antes de qualquer mudança e validação em ambiente paralelo quando for preciso.</li>
+    <li><strong>Documentação e repasse</strong>Tudo documentado, com uma sessão de treinamento para quem vai operar.</li>
+  </ol>
+</section>
+
+<section id="cases">
+  <h2>Cases reais</h2>
+  <p class="muted">Problemas reais, resolvidos e documentados: o que estava acontecendo, o diagnóstico, o que foi feito e o que mudou.</p>
+  <a class="card cases-cta" href="cases/wifi-pousada/">
+    <img src="cases/wifi-pousada/img/antena-instalada.jpg" alt="Tácio ao lado da estação outdoor Intelbras WOG 212 instalada" loading="lazy">
+    <div>
+      <p class="tag">Redes e Wi-Fi · 2024</p>
+      <h3>Wi-Fi em todos os quartos de uma pousada</h3>
+      <p>Da repetição de sinal pelo ar para uma rede estruturada, com cabo, switch PoE e pontos de acesso Intelbras AP 360.</p>
+      <span class="btn">Ler o case</span>
+    </div>
+  </a>
+  <nav class="links" aria-label="Cases"><a href="cases/">Ver todos os cases</a></nav>
+</section>
+
+<section>
+  <h2>Compromissos</h2>
+  <div class="grid">
+    <div class="card"><h3>Produção é sagrada</h3><p>Nada vai para o ar sem backup e sem validação.</p></div>
+    <div class="card"><h3>Documentar sempre</h3><p>Se não está documentado, não foi entregue.</p></div>
+    <div class="card"><h3>Sem dependência</h3><p>O objetivo é sua equipe precisar cada vez menos de mim.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Quem está por trás</h2>
+  <p>Eu sou o Tácio Souza, Cloud Engineer com base em Linux, Kubernetes, Terraform e automação. Tenho a certificação LFCS e estou na trilha de certificações da Linux Foundation e da CNCF. Aplico em um laboratório próprio, documentado em público, as mesmas práticas que proponho aos clientes. Este site é o primeiro case: domínio próprio, HTTPS e publicação automatizada pelo GitHub.</p>
+  <nav class="links" aria-label="Mais sobre o trabalho">
+    <a href="cases/">Cases</a>
+    <a href="https://engineer.tacio.cloud/" target="_blank" rel="noopener">Laboratório</a>
+    <a href="https://github.com/taciosouzaoliveira" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/taciosouzaoliveira" target="_blank" rel="noopener">LinkedIn</a>
+  </nav>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>Vamos conversar sobre o seu ambiente?</h2>
+    <p>Mande um resumo do que você roda hoje e o que quer melhorar. Respondo com os próximos passos.</p>
+    <a class="btn" href="https://wa.me/5579996441081?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kurumin%20e%20quero%20marcar%20uma%20conversa." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn alt" href="mailto:contato@kurumintecnologia.com.br?subject=Consultoria%20Kurumin">contato@kurumintecnologia.com.br</a>
+  </div>
+</section>
+
+<footer>© 2026 Kurumin Tecnologia · Tácio Souza</footer>
+</main>
+
+<a class="whats-float"
+   href="https://wa.me/5579996441081?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kurumin%20e%20quero%20conversar%20sobre%20o%20meu%20ambiente."
+   target="_blank" rel="noopener"
+   aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  <span>Fale comigo</span>
+</a>
+</body>
+</html>

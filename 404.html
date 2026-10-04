@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página não encontrada | Kurumin Tecnologia</title>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0f17;--card:#161b22;--line:#30363d;--text:#c9d1d9;--muted:#8b949e;--blue:#58a6ff;--green:#3fb950}
+@media (prefers-color-scheme:light){:root{--bg:#f6f8fa;--card:#fff;--line:#d0d7de;--text:#24292f;--muted:#57606a;--blue:#0969da;--green:#1a7f37}}
+*{box-sizing:border-box}
+html{scroll-padding-top:1rem}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+main{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.back{font-size:.9rem;color:var(--muted);text-decoration:none}
+header{padding:3rem 0 2rem;border-bottom:1px solid var(--line)}
+h1{font-family:"Ubuntu","Segoe UI",system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:.5rem 0 1rem;max-width:20ch}
+h1 span{color:var(--blue)}
+.lead{max-width:62ch;color:var(--muted);font-size:1.1rem;margin:0 0 1.5rem}
+.btn{display:inline-block;background:var(--blue);color:#0b0f17;font-weight:700;padding:.75rem 1.25rem;border-radius:8px;text-decoration:none}
+.btn.alt{background:transparent;color:var(--blue);border:1px solid var(--line);margin-left:.5rem}
+section{margin-top:3rem}
+h2{font-size:1.5rem;margin:0 0 1rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+.card h3{margin:0 0 .5rem;font-size:1.15rem}
+.card p{margin:.5rem 0;color:var(--muted)}
+.card ul{margin:.75rem 0 0;padding-left:1.1rem}
+.card li{margin:.3rem 0}
+.main{border-left:3px solid var(--blue)}
+.tag{font-size:.85rem;color:var(--green);font-weight:600}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:.75rem}
+ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem 1rem 3.25rem;position:relative}
+ol.steps li::before{content:counter(s);position:absolute;left:1rem;top:1rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--blue);color:#0b0f17;font-weight:700;display:grid;place-items:center;font-size:.9rem}
+ol.steps strong{display:block}
+.cta{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2.5rem 1.25rem}
+.cta p{max-width:52ch;margin:0 auto 1.25rem;color:var(--muted)}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.kicker{font-size:.9rem;color:var(--green);font-weight:600;margin:0}
+.muted{color:var(--muted);margin-top:-.5rem}
+.pains{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem;font-style:italic}
+.lvl{border-top:3px solid var(--lvl)}
+.lvl.main{border-left:1px solid var(--line)}
+.step{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--lvl)!important;margin:0 0 .25rem!important}
+.support{margin-top:1rem;border-left:3px solid var(--green)}
+code{font-size:.9em;background:var(--line);padding:.1em .35em;border-radius:4px}
+.cta .btn.alt{margin-left:.5rem}
+.whats-float{position:fixed;right:20px;bottom:20px;z-index:1000;display:flex;align-items:center;gap:10px;padding:12px 18px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .2s ease}
+.whats-float:hover{transform:scale(1.05)}
+.whats-float:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.whats-float svg{width:21px;height:24px;fill:#fff;flex-shrink:0}
+@media (max-width:520px){.btn.alt,.cta .btn.alt{margin:.75rem 0 0}.whats-float{padding:14px}.whats-float span{display:none}}
+.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.links a{color:var(--text);text-decoration:none;font-weight:600;font-size:.95rem;padding:.5rem 1rem;border:1px solid var(--line);border-radius:999px;background:var(--card);transition:border-color .2s ease,color .2s ease}
+.links a:hover{border-color:var(--blue);color:var(--blue)}
+.cases-cta{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;align-items:center;text-decoration:none;color:inherit;border-left:3px solid var(--green);transition:border-color .2s ease}
+.cases-cta:hover{border-color:var(--green)}
+.cases-cta img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block}
+.cases-cta h3{color:var(--text);font-size:1.35rem;margin:.25rem 0 .5rem}
+.cases-cta .tag{color:var(--green);margin:0}
+.cases-cta .btn{margin-top:.75rem}
+@media (max-width:560px){.cases-cta{grid-template-columns:1fr}.cases-cta img{aspect-ratio:16/9}}
+.cases-cta img,.case-item img{object-position:15% 85%}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <p class="kicker">Erro 404</p>
+  <h1>Essa página <span>não existe</span></h1>
+  <p class="lead">O endereço pode ter mudado. Volte para a página principal ou veja os cases.</p>
+  <a class="btn" href="/">Página principal</a>
+  <a class="btn alt" href="/cases/">Ver os cases</a>
+</header>
+</main>
+</body>
+</html>
