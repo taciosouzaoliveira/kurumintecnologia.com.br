@@ -14,7 +14,10 @@
 <meta property="og:title" content="Cases | Kurumin Tecnologia">
 <meta property="og:description" content="Problemas reais de infraestrutura, redes e servidores, resolvidos e documentados.">
 <meta property="og:url" content="https://kurumintecnologia.com.br/cases/">
-<meta property="og:image" content="https://kurumintecnologia.com.br/cases/wifi-pousada/img/antena-instalada.jpg">
+<meta property="og:image" content="https://kurumintecnologia.com.br/img/og-kurumin.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#050A1A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,6 +111,14 @@ th{font-size:.9rem;color:var(--muted)}
 .diag .price .tag{margin:0}.diag .price strong{font-size:2.6rem;line-height:1;color:var(--blue);font-family:"Ubuntu","Segoe UI",system-ui,sans-serif}
 .diag .price p{margin:0;color:var(--muted);font-size:.92rem}.diag .price .btn{text-align:center;margin-top:.5rem}
 @media (max-width:720px){.diag{grid-template-columns:1fr;padding:1.25rem}}
+.site-footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1.4fr 1fr;gap:2rem}
+.site-footer h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text);margin:0 0 .75rem}
+.site-footer nav a,.site-footer div>a{display:block;color:var(--muted);text-decoration:none;margin:.35rem 0}
+.site-footer a:hover{color:var(--blue)}.site-footer p{margin:.5rem 0}
+.site-footer .ft-brand .brand{display:flex;margin:0 0 .75rem}.ft-tag{font-family:ui-monospace,"JetBrains Mono",monospace;color:var(--green)}
+.ft-legal{margin-top:2rem!important;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.85rem}
+@media (max-width:720px){.ft-grid{grid-template-columns:1fr 1fr;gap:1.5rem}.ft-brand,.ft-contact{grid-column:1/-1}.ft-contact{order:3}}
 </style>
 </head>
 <body>
@@ -149,7 +160,32 @@ th{font-size:.9rem;color:var(--muted)}
   </div>
 </section>
 
-<footer>© 2026 Kurumin Tecnologia · Tácio Souza</footer>
+<footer class="site-footer">
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <a class="brand" href="/"><svg width="28" height="28" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#050A1A"/><path d="M44.85 50L35.60 50Q34.55 48.30 33.13 46.33Q31.70 44.35 30.02 42.38Q28.35 40.40 26.55 38.58Q24.75 36.75 22.95 35.35L22.95 35.35L22.95 50L15.15 50L15.15 15.35L22.95 15.35L22.95 28.45Q26 25.25 29.07 21.77Q32.15 18.30 34.80 15.35L34.80 15.35L44.05 15.35Q40.50 19.55 36.92 23.45Q33.35 27.35 29.40 31.30L29.40 31.30Q33.55 34.75 37.42 39.50Q41.30 44.25 44.85 50L44.85 50Z" fill="#1EB8F0"/><circle cx="51" cy="49" r="5" fill="#2EE6A6"/></svg><span><b>Kurumin</b> Tecnologia</span></a>
+      <p>Consultoria de infraestrutura, redes, automação e cloud para pequenas e médias empresas.</p>
+      <p class="ft-tag">Do servidor ao cluster.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <h3>Navegação</h3>
+      <a href="/#servicos">Serviços</a><a href="/#diagnostico">Diagnóstico</a><a href="/cases/">Cases</a><a href="/privacidade/">Política de privacidade</a>
+    </nav>
+    <div class="ft-contact">
+      <h3>Contato</h3>
+      <a href="https://wa.me/kurumintecnologia" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:contato@kurumintecnologia.com.br">contato@kurumintecnologia.com.br</a>
+      <p>Aracaju (SE) · atendimento remoto em todo o Brasil</p>
+    </div>
+    <div>
+      <h3>Redes</h3>
+      <a href="https://instagram.com/kurumintecnologia" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/146676474" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/taciosouzaoliveira" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <p class="ft-legal">© 2026 Kurumin Tecnologia · Tácio Souza de Oliveira</p>
+</footer>
 </main>
 
 <a class="whats-float"
