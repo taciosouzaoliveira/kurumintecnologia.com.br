@@ -123,7 +123,6 @@ h2,h3,.cases-cta h3{font-family:"Sora","Segoe UI",system-ui,sans-serif;letter-sp
 h1{letter-spacing:-.02em}
 .tool-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:center}
 .tool-hero img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
-.tool-hero img.hero-shot{border:0;border-radius:14px;height:auto}
 .dl{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
 .dl .btn,.dl .btn.alt{margin:0}
 .dl .btn small{display:block;font-weight:500;font-size:.78rem;opacity:.85}
@@ -134,6 +133,13 @@ pre code{background:none;padding:0;font-size:.92rem}
 .shots img{display:block;width:100%}
 .shots figcaption{padding:.6rem .8rem;margin:0}
 .note-box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.25rem;color:var(--muted);font-size:.95rem}
+.term{margin:0;border-radius:14px;overflow:hidden;background:#050A1A;border:1px solid #1f3560;box-shadow:0 24px 48px -24px rgba(5,10,26,.55)}
+.term-bar{display:flex;align-items:center;gap:7px;padding:10px 14px;background:#0b1730;border-bottom:1px solid #1f3560}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.term-bar i:nth-child(2){background:#febc2e}.term-bar i:nth-child(3){background:#28c840}
+.term-bar span{margin-left:8px;color:#93abcc;font:500 12px ui-monospace,"JetBrains Mono",monospace}
+.term pre{margin:0;padding:16px 18px 18px;border:0;border-radius:0;background:none;color:#d6e2f3;font:13.5px/1.6 ui-monospace,"JetBrains Mono","DejaVu Sans Mono",monospace;white-space:pre;overflow-x:auto}
+.term b{color:#fff;font-weight:700}.term .tp,.term .tg{color:#2EE6A6}.term .td{color:#93abcc}.term .tt{color:#1EB8F0;font-weight:700}.term .tu{color:#1EB8F0;text-decoration:underline}
+@media (max-width:420px){.term pre{font-size:12px;padding:14px}}
 @media (max-width:760px){.tool-hero{grid-template-columns:1fr}}
 </style>
 </head>
@@ -167,7 +173,29 @@ pre code{background:none;padding:0;font-size:.92rem}
         <a class="btn alt" href="https://github.com/kurumintecnologia/kurumin-pulso" target="_blank" rel="noopener">Código no GitHub</a>
       </div>
     </div>
-    <img class="hero-shot" src="img/pulso-terminal.png" alt="Terminal com o resultado do Kurumin Pulso: Wi-Fi 5 GHz, latência 38,9 ms, jitter 2,0 ms, perda 0%, download 200,6 e upload 66,4 Mbit/s, sem problemas encontrados" width="722" height="587">
+    <figure class="term" role="img" aria-label="Terminal com o resultado do Kurumin Pulso: Wi-Fi 5 GHz, latência 38,9 ms, jitter 2,0 ms, perda 0%, download 200,6 e upload 66,4 Mbit/s, sem problemas encontrados">
+      <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>Terminal</span></div>
+<pre aria-hidden="true"><span class="tp">$</span> kurumin-pulso --rotulo wifi
+<span class="td">  · medindo roteador, Cloudflare e Google</span>
+<span class="td">  · medindo DNS, download e upload</span>
+
+  <span class="tt">KURUMIN PULSO</span> <span class="td">· Kurumin Tecnologia</span>
+<span class="td">  ──────────────────────────────────────</span>
+  Conexão   <b>Wi-Fi</b> <span class="td">5 GHz, sinal -57 dBm</span>
+  Latência     <b>38,9</b> ms
+  Jitter        <b>2,0</b> ms
+  Perda         <b>0,0</b> %
+  DNS          <b>35,6</b> ms
+  Download    <b>200,6</b> Mbit/s
+  Upload       <b>66,4</b> Mbit/s
+<span class="td">  Roteador  1,2 ms, perda 0,0%</span>
+<span class="td">  ──────────────────────────────────────</span>
+  <span class="tg">✓</span> <b>Sem perda de pacotes</b>
+  <span class="tg">✓</span> <b>Jitter baixo: 2,0 ms</b>
+  <span class="tg">✓</span> <b>Sinal Wi-Fi bom: -57 dBm</b>
+
+  Relatório: <span class="tu">ultimo.html</span></pre>
+    </figure>
   </div>
 </section>
 
