@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferramentas grátis | Kurumin Tecnologia</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Ferramentas gratuitas e de código aberto da Kurumin Tecnologia. Kurumin Pulso: teste de rede em um comando, com relatório e histórico, para Linux e Windows.">
+<link rel="canonical" href="https://kurumintecnologia.com.br/ferramentas/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kurumin Tecnologia">
+<meta property="og:title" content="Ferramentas grátis | Kurumin Tecnologia">
+<meta property="og:description" content="Kurumin Pulso: teste de rede em um comando, com relatório e histórico. Software livre, para Linux e Windows.">
+<meta property="og:url" content="https://kurumintecnologia.com.br/ferramentas/">
+<meta property="og:image" content="https://kurumintecnologia.com.br/img/og-kurumin.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#050A1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050A1A;--card:#0b1730;--line:#1f3560;--text:#d6e2f3;--muted:#93abcc;--blue:#1EB8F0;--green:#2EE6A6}
+@media (prefers-color-scheme:light){:root{--bg:#f4f8ff;--card:#fff;--line:#d3deef;--text:#0b1a33;--muted:#4a5d7a;--blue:#0a7fb3;--green:#0f8a63}}
+*{box-sizing:border-box}
+html{scroll-padding-top:1rem}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+main{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.back{font-size:.9rem;color:var(--muted);text-decoration:none}
+header{padding:3rem 0 2rem;border-bottom:1px solid var(--line)}
+h1{font-family:"Sora","Segoe UI",system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:.5rem 0 1rem;max-width:20ch}
+h1 span{color:var(--blue)}
+.lead{max-width:62ch;color:var(--muted);font-size:1.1rem;margin:0 0 1.5rem}
+.btn{display:inline-block;background:var(--blue);color:#050A1A;font-weight:700;padding:.75rem 1.25rem;border-radius:8px;text-decoration:none}
+.btn.alt{background:transparent;color:var(--blue);border:1px solid var(--line);margin-left:.5rem}
+section{margin-top:3rem}
+h2{font-size:1.5rem;margin:0 0 1rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+.card h3{margin:0 0 .5rem;font-size:1.15rem}
+.card p{margin:.5rem 0;color:var(--muted)}
+.card ul{margin:.75rem 0 0;padding-left:1.1rem}
+.card li{margin:.3rem 0}
+.main{border-left:3px solid var(--blue)}
+.tag{font-size:.85rem;color:var(--green);font-weight:600}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:.75rem}
+ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem 1rem 3.25rem;position:relative}
+ol.steps li::before{content:counter(s);position:absolute;left:1rem;top:1rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--blue);color:#050A1A;font-weight:700;display:grid;place-items:center;font-size:.9rem}
+ol.steps strong{display:block}
+.cta{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2.5rem 1.25rem}
+.cta p{max-width:52ch;margin:0 auto 1.25rem;color:var(--muted)}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.kicker{font-size:.9rem;color:var(--green);font-weight:600;margin:0}
+.muted{color:var(--muted);margin-top:-.5rem}
+.pains{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem;font-style:italic}
+.lvl{border-top:3px solid var(--lvl)}
+.lvl.main{border-left:1px solid var(--line)}
+.step{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--lvl)!important;margin:0 0 .25rem!important}
+.support{margin-top:1rem;border-left:3px solid var(--green)}
+code{font-size:.9em;background:var(--line);padding:.1em .35em;border-radius:4px}
+.cta .btn.alt{margin-left:.5rem}
+.whats-float{position:fixed;right:20px;bottom:20px;z-index:1000;display:flex;align-items:center;gap:10px;padding:12px 18px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .2s ease}
+.whats-float:hover{transform:scale(1.05)}
+.whats-float:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.whats-float svg{width:21px;height:24px;fill:#fff;flex-shrink:0}
+@media (max-width:520px){.btn.alt,.cta .btn.alt{margin:.75rem 0 0}.whats-float{padding:14px}.whats-float span{display:none}}
+
+.facts{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:1.5rem}
+.facts .card p{margin:.25rem 0 0}
+.facts h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0}
+figure{margin:1.5rem 0}
+figure.diagram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem;overflow-x:auto}
+figure.diagram svg{width:100%;min-width:640px;height:auto;display:block}
+figcaption{color:var(--muted);font-size:.9rem;margin-top:.75rem}
+.layers{display:grid;gap:.5rem;margin:1rem 0}
+.layers div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem}
+.layers div.hit{border-left:3px solid #f85149}
+.layers b{display:block}
+.layers span{color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th,td{text-align:left;padding:.65rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.9rem;color:var(--muted)}
+.table-wrap{overflow-x:auto}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.gallery figcaption{padding:.6rem .8rem;margin:0}
+.case-item{display:grid;grid-template-columns:160px 1fr;gap:1.25rem;align-items:center;text-decoration:none;color:inherit}
+.case-item img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block}
+.case-item h3{color:var(--text)}
+.case-item:hover h3{color:var(--blue)}
+.meta{font-size:.9rem;color:var(--muted);margin:0}
+@media (max-width:560px){.case-item{grid-template-columns:1fr}.case-item img{aspect-ratio:16/9}}
+.cases-cta img,.case-item img{object-position:15% 85%}
+.topbar{position:sticky;top:0;z-index:900;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:960px;margin:0 auto;padding:.6rem 1.25rem;display:flex;align-items:center;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text);font-size:1.05rem;white-space:nowrap}
+.brand svg{flex-shrink:0;display:block}.brand b{font-family:"Sora","Segoe UI",system-ui,sans-serif}
+.menu{display:flex;gap:1.25rem;margin-left:auto}.menu a{color:var(--muted);text-decoration:none;font-size:.95rem;font-weight:600}.menu a:hover{color:var(--blue)}
+.btn.small{padding:.5rem 1rem;font-size:.9rem;margin:0}
+@media (max-width:720px){.menu{display:none}.topbar .btn.small{margin-left:auto}.brand span{font-size:.95rem}}
+.diag{display:grid;grid-template-columns:1fr 300px;gap:1.5rem;border:1px solid var(--blue);border-radius:12px;padding:1.75rem;background:var(--card)}
+.diag h2{margin:.25rem 0 .5rem}.diag ul{margin:.75rem 0 0;padding-left:1.1rem}.diag li{margin:.35rem 0}
+.diag .price{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:1.25rem;display:flex;flex-direction:column;gap:.5rem;align-self:start}
+.diag .price .tag{margin:0}.diag .price strong{font-size:2.6rem;line-height:1;color:var(--blue);font-family:"Sora","Segoe UI",system-ui,sans-serif}
+.diag .price p{margin:0;color:var(--muted);font-size:.92rem}.diag .price .btn{text-align:center;margin-top:.5rem}
+@media (max-width:720px){.diag{grid-template-columns:1fr;padding:1.25rem}}
+.site-footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1.4fr 1fr;gap:2rem}
+.site-footer h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text);margin:0 0 .75rem}
+.site-footer nav a,.site-footer div>a{display:block;color:var(--muted);text-decoration:none;margin:.35rem 0}
+.site-footer a:hover{color:var(--blue)}.site-footer p{margin:.5rem 0}
+.site-footer .ft-brand .brand{display:flex;margin:0 0 .75rem}.ft-tag{font-family:ui-monospace,"JetBrains Mono",monospace;color:var(--green)}
+.ft-legal{margin-top:2rem!important;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.85rem}
+@media (max-width:720px){.ft-grid{grid-template-columns:1fr 1fr;gap:1.5rem}.ft-brand,.ft-contact{grid-column:1/-1}.ft-contact{order:3}}
+h2,h3,.cases-cta h3{font-family:"Sora","Segoe UI",system-ui,sans-serif;letter-spacing:-.01em}
+h1{letter-spacing:-.02em}
+.tool-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:center}
+.tool-hero img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.dl{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}
+.dl .btn,.dl .btn.alt{margin:0}
+.dl .btn small{display:block;font-weight:500;font-size:.78rem;opacity:.85}
+pre{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.85rem 1rem;overflow-x:auto;margin:.5rem 0 0}
+pre code{background:none;padding:0;font-size:.92rem}
+.shots{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.shots figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.shots img{display:block;width:100%}
+.shots figcaption{padding:.6rem .8rem;margin:0}
+.note-box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1.25rem;color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.tool-hero{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="topbar" aria-label="Principal">
+  <div class="topbar-in">
+    <a class="brand" href="/"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#050A1A" stroke="#1f3560" stroke-width="2"/><path d="M44.85 50L35.60 50Q34.55 48.30 33.13 46.33Q31.70 44.35 30.02 42.38Q28.35 40.40 26.55 38.58Q24.75 36.75 22.95 35.35L22.95 35.35L22.95 50L15.15 50L15.15 15.35L22.95 15.35L22.95 28.45Q26 25.25 29.07 21.77Q32.15 18.30 34.80 15.35L34.80 15.35L44.05 15.35Q40.50 19.55 36.92 23.45Q33.35 27.35 29.40 31.30L29.40 31.30Q33.550 34.75 37.42 39.50Q41.30 44.25 44.85 50L44.85 50Z" fill="#1EB8F0"/><circle cx="51" cy="49" r="5" fill="#2EE6A6"/></svg><span><b>Kurumin</b> Tecnologia</span></a>
+    <div class="menu"><a href="/#servicos">Serviços</a><a href="/#diagnostico">Diagnóstico</a><a href="/cases/">Cases</a><a href="/ferramentas/">Ferramentas</a><a href="/#contato">Contato</a></div>
+    <a class="btn small" href="https://wa.me/kurumintecnologia?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kurumin%20e%20quero%20marcar%20uma%20conversa." target="_blank" rel="noopener">Conversar</a>
+  </div>
+</nav>
+<main>
+<a class="back" href="/">← Kurumin Tecnologia</a>
+
+<header>
+  <p class="kicker">Kurumin Tecnologia · Ferramentas grátis</p>
+  <h1>Ferramentas grátis, <span>de código aberto</span></h1>
+  <p class="lead">O que eu uso no dia a dia para diagnosticar redes e servidores, liberado para qualquer pessoa usar, estudar e melhorar. Sem cadastro, sem anúncio, sem coleta de dados.</p>
+</header>
+
+<section id="pulso">
+  <div class="tool-hero">
+    <div>
+      <p class="tag">Redes · Linux e Windows · Software livre (GPL-3.0)</p>
+      <h2>Kurumin Pulso</h2>
+      <p><strong>Teste de rede em um comando.</strong> Mede latência, jitter, perda de pacotes, DNS, download e upload, e diz em português se o problema está <strong>na sua casa</strong> (cabo, Wi-Fi, roteador) ou <strong>no provedor</strong>.</p>
+      <p class="muted" style="margin-top:0">Gera um relatório com gráficos e guarda o histórico para você comparar cabo × Wi-Fi e horário × horário.</p>
+      <div class="dl">
+        <a class="btn" href="https://github.com/kurumintecnologia/kurumin-pulso/releases/latest/download/kurumin-pulso.exe">Baixar para Windows<small>kurumin-pulso.exe</small></a>
+        <a class="btn" href="https://github.com/kurumintecnologia/kurumin-pulso/releases/latest" target="_blank" rel="noopener">Baixar para Debian/Ubuntu<small>pacote .deb</small></a>
+        <a class="btn alt" href="https://github.com/kurumintecnologia/kurumin-pulso" target="_blank" rel="noopener">Código no GitHub</a>
+      </div>
+    </div>
+    <img src="img/pulso-resumo.png" alt="Relatório do Kurumin Pulso: cartões com latência, jitter, perda e conexão, seguidos do diagnóstico" width="791" height="463">
+  </div>
+</section>
+
+<section>
+  <h2>O que ele mede</h2>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr))">
+    <div class="card"><h3>Latência e jitter</h3><p>Quanto o pacote demora para ir e voltar, e o quanto isso oscila. Jitter alto trava chamada de vídeo e jogo.</p></div>
+    <div class="card"><h3>Perda de pacotes</h3><p>Mede até o roteador e até a internet. Se a perda começa no roteador, o problema está dentro de casa.</p></div>
+    <div class="card"><h3>DNS, download e upload</h3><p>Tempo para achar os sites e velocidade real de transferência, comparada com o seu plano quando você informa.</p></div>
+    <div class="card"><h3>Cabo ou Wi-Fi</h3><p>Banda e sinal do Wi-Fi; no cabo, a velocidade negociada. Cabo fechando só 100 Mb/s costuma ser cabo danificado.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Como usar</h2>
+  <ol class="steps">
+    <li><strong>Windows 10 e 11</strong>Baixe o <code>kurumin-pulso.exe</code> e dê dois cliques. O teste roda e o relatório abre no navegador.</li>
+    <li><strong>Debian, Ubuntu e derivados</strong>Baixe o <code>.deb</code> na página de downloads e instale:<pre><code>sudo apt install ./kurumin-pulso_*_all.deb
+kurumin-pulso --rotulo wifi</code></pre></li>
+    <li><strong>Compare com o seu plano</strong>Informe a velocidade contratada (download/upload, em Mbit/s):<pre><code>kurumin-pulso --contratado 500/250</code></pre></li>
+    <li><strong>Repita em situações diferentes</strong>Use <code>--rotulo cabo</code>, <code>--rotulo wifi</code> ou o horário. O relatório mostra a evolução no histórico.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>O relatório</h2>
+  <div class="shots">
+    <figure><img src="img/pulso-latencia.png" alt="Gráfico com a latência de cada pacote até o roteador, a Cloudflare e o Google" width="791" height="392"><figcaption>Latência pacote a pacote: roteador × internet.</figcaption></figure>
+    <figure><img src="img/pulso-historico.png" alt="Gráfico do histórico de latência e jitter em três testes" width="790" height="323"><figcaption>Histórico: compare os testes ao longo do tempo.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="note-box">
+    <p style="margin-top:0"><strong>Medição indicativa.</strong> O Pulso mede a partir do seu computador e não substitui a medição oficial. Com <code>--contratado</code>, ele compara o resultado com a referência da Anatel (40% do contratado na hora e 80% na média do mês).</p>
+    <p>No Windows, o executável ainda não tem assinatura digital: se aparecer o aviso do SmartScreen, clique em <em>Mais informações → Executar assim mesmo</em>. A página de downloads traz o <code>SHA256SUMS</code> para conferir o arquivo.</p>
+    <p style="margin-bottom:0">Vem instalado no <a href="https://sururu.kurumintecnologia.com.br/">Sururu Linux</a> a partir da próxima versão.</p>
+  </div>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>O Pulso achou um problema?</h2>
+    <p>Se a rede da sua empresa vive caindo ou ficando lenta, o Diagnóstico de Infraestrutura encontra a causa e entrega um plano de correção.</p>
+    <a class="btn" href="https://wa.me/kurumintecnologia?text=Ol%C3%A1%2C%20T%C3%A1cio!%20Usei%20o%20Kurumin%20Pulso%20e%20quero%20saber%20sobre%20o%20Diagn%C3%B3stico%20de%20Infraestrutura." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn alt" href="/#diagnostico">Ver o Diagnóstico</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <a class="brand" href="/"><svg width="28" height="28" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#050A1A"/><path d="M44.85 50L35.60 50Q34.55 48.30 33.13 46.33Q31.70 44.35 30.02 42.38Q28.35 40.40 26.55 38.58Q24.75 36.75 22.95 35.35L22.95 35.35L22.95 50L15.15 50L15.15 15.35L22.95 15.35L22.95 28.45Q26 25.25 29.07 21.77Q32.15 18.30 34.80 15.35L34.80 15.35L44.05 15.35Q40.50 19.55 36.92 23.45Q33.35 27.35 29.40 31.30L29.40 31.30Q33.55 34.75 37.42 39.50Q41.30 44.25 44.85 50L44.85 50Z" fill="#1EB8F0"/><circle cx="51" cy="49" r="5" fill="#2EE6A6"/></svg><span><b>Kurumin</b> Tecnologia</span></a>
+      <p>Consultoria de infraestrutura, redes, automação e cloud para pequenas e médias empresas.</p>
+      <p class="ft-tag">Do servidor ao cluster.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <h3>Navegação</h3>
+      <a href="/#servicos">Serviços</a><a href="/#diagnostico">Diagnóstico</a><a href="/cases/">Cases</a><a href="/ferramentas/">Ferramentas grátis</a><a href="/privacidade/">Privacidade e LGPD</a>
+    </nav>
+    <div class="ft-contact">
+      <h3>Contato</h3>
+      <a href="https://wa.me/kurumintecnologia" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:contato@kurumintecnologia.com.br">contato@kurumintecnologia.com.br</a>
+      <p>Aracaju (SE) · atendimento remoto em todo o Brasil</p>
+    </div>
+    <div>
+      <h3>Redes</h3>
+      <a href="https://instagram.com/kurumintecnologia" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/company/146676474" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/taciosouzaoliveira" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <p class="ft-legal">© 2026 Kurumin Tecnologia · Tácio Souza de Oliveira · CNPJ 54.940.532/0001-38</p>
+</footer>
+</main>
+
+<a class="whats-float"
+   href="https://wa.me/kurumintecnologia?text=Ol%C3%A1%2C%20T%C3%A1cio!%20Vi%20as%20ferramentas%20da%20Kurumin%20e%20quero%20conversar."
+   target="_blank" rel="noopener"
+   aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  <span>Fale comigo</span>
+</a>
+</body>
+</html>
